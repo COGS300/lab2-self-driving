@@ -54,7 +54,7 @@ public class CarControlAPI : MonoBehaviour
             //TODO: Write your movement instructions as a list of doubles (number with up to two decimal points) -> ex: {0, -0.5, 1, 0.5}
             double[] instructions = { };
 
-            //Yunction which will run those instructions one at a time and switch every 0.5 seconds
+            //Function which will run those instructions one at a time and switch every 0.5 seconds
             ExectuteInstructions(instructions, 0.5);
             //Only start this function once;
             execute = false;
@@ -93,18 +93,30 @@ public class CarControlAPI : MonoBehaviour
         controlScript.SetThrottle(1);
 
 
-        //See Raycast function below for description on wha
+        //See Raycast description in Utilities below
         float rightDist = Raycast(45);
         float leftDist = Raycast(-45);
 
-        if (rightDist > leftDist)
-        {
-            controlScript.SetTurn(1);
-        }
-        else if (rightDist < leftDist)
-        {
-            controlScript.SetTurn(-1);
-        }
+        //TODO: Write logic which will allow the car to navigate the course.
+        // A good place to start is to keep the car in the center of the road by turning towards the side which is further away
+
+        //Hint: use if statements
+        //if(condition1){
+        //code to run if condition 1 is true
+        //}
+        //else if(condition2){
+        //code to run if condition1 is false and condition 2 is true
+        //}     
+        //else {
+        // code to run if both condition 1 and 2 are false
+        //}
+
+        // == equal to
+        // > greater than, >= greater or equal
+        // < less than, <= less or equal
+
+        // && and
+        // || or (can be found above backslash near the backspace key)
     }
     #endregion
 
