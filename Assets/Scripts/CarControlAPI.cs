@@ -54,7 +54,7 @@ public class CarControlAPI : MonoBehaviour
             //TODO: Write your movement instructions as a list of doubles (number with up to two decimal points) -> ex: {0, -0.5, 1, 0.5}
             double[] instructions = { };
 
-            //Function which will run those instructions one at a time and switch every 0.5 seconds
+            //Function which will run those instructions one at a time and switch every 0.5 seconds. You can edit the time interval by changing the number on the next line.
             ExectuteInstructions(instructions, 0.5);
             //Only start this function once;
             execute = false;
@@ -90,6 +90,8 @@ public class CarControlAPI : MonoBehaviour
 
     void SensorLogicMovement()
     {
+
+        //Always move forward at full throttle
         controlScript.SetThrottle(1);
 
 
