@@ -52,7 +52,7 @@ public class CarControlAPI : MonoBehaviour
         if (execute)
         {
             //TODO: Write your movement instructions as a list of doubles (number with up to two decimal points) -> ex: {0, -0.5, 1, 0.5}
-            double[] instructions = { };
+            double[] instructions = {};
 
             //Function which will run those instructions one at a time and switch every 0.5 seconds. You can edit the time interval by changing the number on the next line.
             ExectuteInstructions(instructions, 0.5);
@@ -62,9 +62,9 @@ public class CarControlAPI : MonoBehaviour
 
         void ExectuteInstructions(double[] instructions, double delay)
         {
-            StartCoroutine(ExecuteInstructionsCoroutine(instructions, delay));
+            StartCoroutine(ExecuteInstructionsCoroutine());
 
-            IEnumerator ExecuteInstructionsCoroutine(double[] instructions, double delay)
+            IEnumerator ExecuteInstructionsCoroutine()
             {
                 int instructionIndex = 0;
                 while (instructionIndex < instructions.Length)
