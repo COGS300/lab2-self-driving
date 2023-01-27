@@ -101,6 +101,7 @@ public class CarControlAPI : MonoBehaviour
 
         //TODO: Write logic which will allow the car to navigate the course.
         // A good place to start is to keep the car in the center of the road by turning towards the side which is further away
+        // Use controlScript.SetTurn(number) to turn the car. -1 is full left, 1 is full right, and 0 is straight. 
 
         //Hint: use if statements
         //if(condition1){
